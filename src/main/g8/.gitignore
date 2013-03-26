@@ -1,2 +1,19 @@
 target/
 project/target
+
+# vimの一時ファイル
+*.swp
+*.swo
+*~
+
+# Eclipseの一時ファイル
+.cache
+
+# Windowsの一時ファイル
+Thumb.db
+
+# Macの一時ファイル
+.DS_Store
+
+# ログファイル
+*.log
