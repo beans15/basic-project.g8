@@ -11,7 +11,6 @@ scalaVersion := "2.10.0"
 
 libraryDependencies ++= Seq(
   "org.specs2" %% "specs2" % "1.13" % "test"
-
   // ScalaLogging
   //"com.typesafe" %% "scalalogging-slf4j" % "1.0.0",
   //"org.slf4j" % "slf4j-api" % "1.7.1",
