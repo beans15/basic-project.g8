@@ -1,18 +1,19 @@
 package $organization$.$name;format="lower,word"$
 
-import org.specs2.mutable._
+import org.scalatest.{Matchers, PropSpec}
+import org.scalatest.prop._
 
-class AppSpec extends Specification {
+class CheckSpec
+  extends PropSpec
+  with GeneratorDrivenPropertyChecks
+  with Matchers {
 
-  "The 'Hello world' string" should {
-    "contain 11 characters" in {
-      "Hello world" must have size(11)
-    }
-    "start with 'Hello'" in {
-      "Hello world" must startWith("Hello")
-    }
-    "end with 'world'" in {
-      "Hello world" must endWith("world")
+  property ("Addition and multiplication are related") {
+    forAll { (x: Int) =>
+      whenever(x > 0) {
+        x * 2 should be(x + x)
+      }
     }
   }
+
 }
