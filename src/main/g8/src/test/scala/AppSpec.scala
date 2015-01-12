@@ -1,19 +1,9 @@
 package $organization$.$name;format="lower,word"$
 
-import org.scalatest.{Matchers, PropSpec}
-import org.scalatest.prop._
+import org.scalatest._
 
-class CheckSpec
-  extends PropSpec
-  with GeneratorDrivenPropertyChecks
-  with Matchers {
-
-  property ("Addition and multiplication are related") {
-    forAll { (x: Int) =>
-      whenever(x > 0) {
-        x * 2 should be(x + x)
-      }
-    }
+class AppSpec extends FlatSpec with Matchers {
+  "The 'Hello world' string" should "contain 11 characters" in {
+    assert("Hello world".length == 11)
   }
-
 }
